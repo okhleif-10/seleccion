@@ -134,26 +134,31 @@ if __name__ == '__main__':
             if context:
                 st.markdown("### 📝 Squad Context")
                 st.markdown(context, unsafe_allow_html=True)
-            st.dataframe(
-                df.style
-                    .format({
-                    "No.": "{:.0f}",
-                    "Caps": "{:.0f}",
-                    "Goals": "{:.0f}"
-                })
-                    .set_properties(**{
-                    'font-size': '14px',
-                    'text-align': 'center'
-                })
-                    .set_table_styles([
-                    {"selector": "th", "props": [("font-size", "15px"), ("text-align", "center")]},
-                    {"selector": "td", "props": [("text-align", "center")]}
-                ]),
-                use_container_width=False,  # keep the fixed width
-                height = visible_height
-            )
-            # Export option
-            csv = df.to_csv().encode("utf-8")
-            st.download_button("📥 Download CSV", csv, f"{team}_squad.csv", "text/csv")
+            if df is not None:
+                st.dataframe(
+                    df.style
+                        .format({
+                        "No.": "{:.0f}",
+                        "Caps": "{:.0f}",
+                        "Goals": "{:.0f}"
+                    })
+                        .set_properties(**{
+                        'font-size': '14px',
+                        'text-align': 'center'
+                    })
+                        .set_table_styles([
+                        {"selector": "th", "props": [("font-size", "15px"), ("text-align", "center")]},
+                        {"selector": "td", "props": [("text-align", "center")]}
+                    ]),
+                    use_container_width=False,  # keep the fixed width
+                    height = visible_height
+                )
+                # Export option
+                csv = df.to_csv().encode("utf-8")
+                st.download_button("📥 Download CSV", csv, f"{team}_squad.csv", "text/csv")
+            else:
+                st.error(f"Could not load squad for {team}. Please try again.")
+                st.stop()
+
         else:
             st.warning("Could not load squad for that country.")
