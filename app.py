@@ -2,7 +2,10 @@
 
 import streamlit as st
 from PIL import Image
+import base64
+from io import BytesIO
 from logic import *
+
 
 # --- Page setup
 st.set_page_config(
@@ -11,10 +14,56 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-left, center, right = st.columns([2, 5, 2])
-with center:
-    st.image(Image.open("assets/FIFA_logo_without_slogan.svg.png"), width=120)
-    st.title("National Football Team Squad Viewer")
+
+fifa_logo = Image.open("assets/FIFA_logo_without_slogan.svg.png")
+
+seleccion_logo = Image.open("assets/seleccion.png")
+seleccion_logo = seleccion_logo.crop(seleccion_logo.getbbox())
+
+# Helper to convert image to base64
+def image_to_base64(img):
+    buffered = BytesIO()
+    img.save(buffered, format="PNG")
+    return base64.b64encode(buffered.getvalue()).decode()
+
+# Encode images
+fifa_b64 = image_to_base64(fifa_logo)
+seleccion_b64 = image_to_base64(seleccion_logo)
+
+# Custom CSS to align logos and tighten layout
+st.markdown("""
+    <style>
+    .logo-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    h1 {
+        margin-top: 5px !important;  /* 🔧 tighten space above title */
+    }
+
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# Logos side by side
+st.markdown(f"""
+    <div class="logo-row">
+        <img src="data:image/png;base64,{fifa_b64}" style="height:70px;" />
+        <img src="data:image/png;base64,{seleccion_b64}" style="height:70px; margin-top:0px; margin-bottom:0px;" />
+    </div>
+""", unsafe_allow_html=True)
+
+# Title centered below
+st.markdown("<h1 style='text-align: center;'>National Football Team Squad Viewer</h1>", unsafe_allow_html=True)
+
+
 
 if __name__ == '__main__':
     left, center, right = st.columns([2, 5, 2])
