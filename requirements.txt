@@ -1,0 +1,6 @@
+pandas
+requests
+urllib3
+bs4
+pycountry
+streamlit
