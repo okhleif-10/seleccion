@@ -75,12 +75,12 @@ if __name__ == '__main__':
         # --- Sorting Option ---
         sort_option = st.radio(
             "🔀 Sort teams by:",
-            ["FIFA Ranking", "Alphabetical", "Federation"],
+            ["FIFA Ranking", "Alphabetical", "Confederation"],
             horizontal=True
         )
 
         # --- Build Display List Based on Sorting ---
-        if sort_option == "Federation":
+        if sort_option == "Confederation":
             display_list = []
             option_to_country = {}
 
