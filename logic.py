@@ -142,6 +142,7 @@ def add_club_flags(df, matched_table):
             club_cell = cells[-1]
             flag = get_flag_from_img(club_cell)
             name = club_cell.get_text(strip=True)
+            name = re.sub(r'\[[^\]]*?\]', '', name)
             club_cells.append(f"{flag} {name}")
 
         df["Club"] = club_cells
@@ -165,10 +166,22 @@ def extract_squad_description(soup):
             break
         if sibling.name in ['p', 'ul', 'ol', 'dl']:
             content_parts.append(str(sibling))
-    description = "\n".join(content_parts)
-    description = re.sub(r'\[[^\]]*?\]', '', description)
-    return description
+    
+    # Combine and parse the selected content
+    combined = BeautifulSoup("".join(str(el) for el in content_parts), 'html.parser')
 
+    # Fix relative links
+    for a in combined.find_all('a', href=True):
+        href = a['href']
+        if href.startswith('/wiki/'):
+            a['href'] = f"https://en.wikipedia.org{href}"
+            a['target'] = '_blank'
+
+    # Remove citation brackets like [1], [note 2], etc.
+    description_html = str(combined)
+    description_html = re.sub(r'\[[^\]]*?\]', '', description_html)
+
+    return description_html
 # Puts everything together
 # Fetches wikipedia page, finds squad table, converts to dataframe, and formats
 def fetch_team_squad(team):
