@@ -1,5 +1,5 @@
 # Application Link
-Seleccion is a public streamlit app deployed at [seleccion.streamlit.app](seleccion.streamlit.app).
+Seleccion is a public streamlit app deployed at [seleccion.streamlit.app](http://seleccion.streamlit.app).
 
 # Description
 
