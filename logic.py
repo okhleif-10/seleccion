@@ -3,12 +3,15 @@ import requests
 from urllib.parse import quote
 import re
 from bs4 import BeautifulSoup
+from io import StringIO
 import pycountry
 from collections import defaultdict
+
 
 # Load FIFA rankings dataset from assets folder
 def load_fifa_rankings():
     return pd.read_csv("assets/fifa_rankings.csv")
+
 
 # Load FIFA rankings dataset and add row to label confederations
 def get_federations():
@@ -20,6 +23,7 @@ def get_federations():
 
     return confed
 
+
 # Load FIFA Rankings dataset and return the ordered rankings
 def get_rankings():
     df = pd.read_csv("assets/fifa_rankings.csv")
@@ -28,6 +32,7 @@ def get_rankings():
     rankings = table["country_full"].to_list()
 
     return rankings
+
 
 # Get country flag with pycountry when given country name
 def get_flag(country_name):
@@ -60,9 +65,11 @@ def get_flag(country_name):
         except:
             return "🌍"
 
+
 # Format each country name with [Flag] [Country Name]
 def format_country_with_flag(rankings):
     return [f"{get_flag(country)} {country}" for country in rankings]
+
 
 # Translates html flag from wiki table to emoji flag (for club flags)
 def get_flag_from_img(cell):
@@ -70,6 +77,7 @@ def get_flag_from_img(cell):
     if flag_span and flag_span.img and flag_span.img.has_attr("alt"):
         return get_flag(flag_span.img["alt"])
     return "🌍"
+
 
 # Alternative function to get the flag from the club cell
 def extract_club_with_flag(cell):
@@ -83,6 +91,7 @@ def extract_club_with_flag(cell):
     club_name = cell.get_text(strip=True)
     return f"{flag_html}{club_name}"
 
+
 # Gets the wiki table that contains squad
 def find_squad_table(tables):
     for table in tables:
@@ -95,19 +104,33 @@ def find_squad_table(tables):
             return table
     return None
 
-# Fetches the correct wikipedia link for a given nation
+
+HEADERS = {
+    "User-Agent": "seleccion/1.0 (https://seleccion.streamlit.app/; contact: omarkhleif@yahoo.com)"
+}
+
+# Fetches the wikipedia page for a given team
 def fetch_wikipedia_page(team):
     team_encoded = quote(team.replace(" ", "_"))
+
     if team == "United States" or team == "Australia":
         url = f'https://en.wikipedia.org/wiki/{team_encoded}_men\'s_national_soccer_team'
     elif team == "Sweden":
         url = f'https://en.wikipedia.org/wiki/Sweden_men\'s_national_football_team'
     else:
         url = f'https://en.wikipedia.org/wiki/{team_encoded}_national_football_team'
-    response = requests.get(url)
-    if response.status_code != 200:
+
+    try:
+        response = requests.get(url, headers=HEADERS)
+        if response.status_code != 200:
+            print(f"[Error] Failed to fetch: {url}")
+            print(f"Status: {response.status_code}")
+            return None, None
+        return response.text, BeautifulSoup(response.text, 'html.parser')
+    except Exception as e:
+        print(f"[Exception] {e}")
         return None, None
-    return response.text, BeautifulSoup(response.text, 'html.parser')
+
 
 # Convert found squad table into pandas dataframe
 def extract_squad_table(soup):
@@ -116,16 +139,20 @@ def extract_squad_table(soup):
     matched_table = None
 
     for table in html_tables:
+        # For better efficiency
+        if "Player" not in table.text:
+            continue
         try:
-            temp_df = pd.read_html(str(table))[0]
+            temp_df = pd.read_html(StringIO(str(table)))[0]
             if find_squad_table([temp_df]) is not None:
                 df = temp_df
                 matched_table = table
                 break
-        except Exception:
+        except Exception as e:
             continue
 
     return df, matched_table
+
 
 # Add national flags for each club in the dataframe
 def add_club_flags(df, matched_table):
@@ -148,6 +175,7 @@ def add_club_flags(df, matched_table):
         df["Club"] = club_cells
     return df
 
+
 # Get squad description context
 def extract_squad_description(soup):
     section = soup.find(id="Current_squad") or soup.find(id="Players")
@@ -166,7 +194,7 @@ def extract_squad_description(soup):
             break
         if sibling.name in ['p', 'ul', 'ol', 'dl']:
             content_parts.append(str(sibling))
-    
+
     # Combine and parse the selected content
     combined = BeautifulSoup("".join(str(el) for el in content_parts), 'html.parser')
 
@@ -182,14 +210,18 @@ def extract_squad_description(soup):
     description_html = re.sub(r'\[[^\]]*?\]', '', description_html)
 
     return description_html
+
+
 # Puts everything together
 # Fetches wikipedia page, finds squad table, converts to dataframe, and formats
 def fetch_team_squad(team):
     html, soup = fetch_wikipedia_page(team)
+
     if soup is None:
         return None, None
 
     df, matched_table = extract_squad_table(soup)
+    print(df)
     if df is None:
         return None, None
 
