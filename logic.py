@@ -42,6 +42,7 @@ def get_flag(country_name):
         "Ivory Coast": "🇨🇮",
         "US Virgin Islands": "🇻🇮",
         "Macau": "🇲🇴",
+        "Monaco": "🇫🇷",
         "Niger": "🇳🇪",
         "Kosovo": "🇽🇰",
         "Palestine": "🇵🇸",
@@ -103,7 +104,6 @@ HEADERS = {
 # Fetches the wikipedia page for a given team
 def fetch_wikipedia_page(team):
     team_encoded = quote(team.replace(" ", "_"))
-
     if team == "United States" or team == "Australia":
         url = f'https://en.wikipedia.org/wiki/{team_encoded}_men\'s_national_soccer_team'
     elif team == "Sweden":
@@ -140,7 +140,6 @@ def extract_squad_table(soup):
                 break
         except Exception as e:
             continue
-
     return df, matched_table
 
 # Add national flags for each club in the dataframe
