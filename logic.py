@@ -7,11 +7,9 @@ from io import StringIO
 import pycountry
 from collections import defaultdict
 
-
 # Load FIFA rankings dataset from assets folder
 def load_fifa_rankings():
     return pd.read_csv("assets/fifa_rankings.csv")
-
 
 # Load FIFA rankings dataset and add row to label confederations
 def get_federations():
@@ -23,7 +21,6 @@ def get_federations():
 
     return confed
 
-
 # Load FIFA Rankings dataset and return the ordered rankings
 def get_rankings():
     df = pd.read_csv("assets/fifa_rankings.csv")
@@ -32,7 +29,6 @@ def get_rankings():
     rankings = table["country_full"].to_list()
 
     return rankings
-
 
 # Get country flag with pycountry when given country name
 def get_flag(country_name):
@@ -65,11 +61,9 @@ def get_flag(country_name):
         except:
             return "🌍"
 
-
 # Format each country name with [Flag] [Country Name]
 def format_country_with_flag(rankings):
     return [f"{get_flag(country)} {country}" for country in rankings]
-
 
 # Translates html flag from wiki table to emoji flag (for club flags)
 def get_flag_from_img(cell):
@@ -77,7 +71,6 @@ def get_flag_from_img(cell):
     if flag_span and flag_span.img and flag_span.img.has_attr("alt"):
         return get_flag(flag_span.img["alt"])
     return "🌍"
-
 
 # Alternative function to get the flag from the club cell
 def extract_club_with_flag(cell):
@@ -91,7 +84,6 @@ def extract_club_with_flag(cell):
     club_name = cell.get_text(strip=True)
     return f"{flag_html}{club_name}"
 
-
 # Gets the wiki table that contains squad
 def find_squad_table(tables):
     for table in tables:
@@ -103,7 +95,6 @@ def find_squad_table(tables):
         if any("player" in col for col in cols) and any("caps" in col for col in cols):
             return table
     return None
-
 
 HEADERS = {
     "User-Agent": "seleccion/1.0 (https://seleccion.streamlit.app/; contact: omarkhleif@yahoo.com)"
@@ -131,7 +122,6 @@ def fetch_wikipedia_page(team):
         print(f"[Exception] {e}")
         return None, None
 
-
 # Convert found squad table into pandas dataframe
 def extract_squad_table(soup):
     html_tables = soup.find_all("table")
@@ -153,7 +143,6 @@ def extract_squad_table(soup):
 
     return df, matched_table
 
-
 # Add national flags for each club in the dataframe
 def add_club_flags(df, matched_table):
     if matched_table and "Club" in df.columns:
@@ -174,7 +163,6 @@ def add_club_flags(df, matched_table):
 
         df["Club"] = club_cells
     return df
-
 
 # Get squad description context
 def extract_squad_description(soup):
@@ -211,7 +199,6 @@ def extract_squad_description(soup):
 
     return description_html
 
-
 # Puts everything together
 # Fetches wikipedia page, finds squad table, converts to dataframe, and formats
 def fetch_team_squad(team):
@@ -221,7 +208,6 @@ def fetch_team_squad(team):
         return None, None
 
     df, matched_table = extract_squad_table(soup)
-    print(df)
     if df is None:
         return None, None
 
