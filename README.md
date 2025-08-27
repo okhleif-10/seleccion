@@ -1,5 +1,7 @@
 # Application Link
-Seleccion is a public streamlit app deployed at [seleccion.streamlit.app](http://seleccion.streamlit.app).
+Seleccion is a public streamlit app deployed at [seleccion.streamlit.app](http://seleccion.streamlit.app). 
+
+Sometimes streamlit apps go to sleep due to inactivity. If this is the case and you are unable to reboot, please email omarkhleif@yahoo.com.
 
 # Description
 
