@@ -1,13 +1,13 @@
-# Application Link
-Seleccion is a public streamlit app deployed at [seleccion.streamlit.app](http://seleccion.streamlit.app). 
-
-Sometimes streamlit apps go to sleep due to inactivity. If this is the case and you are unable to reboot, please email omarkhleif@yahoo.com.
-
-# Description
+# Seleccion -- FIFA Men's National Team Squad Viewer
 
 Each FIFA men's national team has a Wikipedia page that I have found to be the most reliable and up to date source for squad announcements from around the world as they are published and updated frequently by anyone in the world in live time. However, there has never been a centralized app or website that shows you the most up to date and correct current selection for a national team-- Until now!
 
 Seleccion is a painfully easy UI to view your favorite FIFA National Team's latest, most up-to-date squad with just the click of a button. Scraped live from each national team's wikipedia page, view any or all 211 FIFA Member's latest squad selections and associated data such as CAPS, goals, kit number, and other player information. Using our dropdown or dropdown search mechinism, finding your national team's latest squad announcement has never been so easy.
+
+# Application Link
+Seleccion is a public streamlit app deployed at [seleccion.streamlit.app](http://seleccion.streamlit.app). 
+
+Sometimes streamlit apps go to sleep due to inactivity. If this is the case and you are unable to reboot, please email omarkhleif@yahoo.com.
 
 ## UI Screenshot
 <img width="1040" height="972" alt="Screen Shot 2025-08-02 at 10 22 27 PM" src="https://github.com/user-attachments/assets/2a24f74e-5bdd-4c24-8dc2-067f34d78f2c" />
