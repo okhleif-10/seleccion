@@ -50,6 +50,7 @@ def get_flag(country_name):
         "Türkiye": "🇹🇷",
         "Turkey": "🇹🇷",
         "Tahiti": "🇵🇫",
+        "Republic of Ireland": "🇮🇪",
         "United Kingdom": "🇬🇧"
     }
 
@@ -108,6 +109,8 @@ def fetch_wikipedia_page(team):
         url = f'https://en.wikipedia.org/wiki/{team_encoded}_men\'s_national_soccer_team'
     elif team == "Sweden":
         url = f'https://en.wikipedia.org/wiki/Sweden_men\'s_national_football_team'
+    elif team == "Ireland":
+        url = f'https://en.wikipedia.org/wiki/Republic_of_Ireland_national_football_team'
     else:
         url = f'https://en.wikipedia.org/wiki/{team_encoded}_national_football_team'
 
