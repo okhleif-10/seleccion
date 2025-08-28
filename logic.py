@@ -1,4 +1,3 @@
-
 import pandas as pd
 import requests
 from urllib.parse import quote
@@ -106,7 +105,6 @@ HEADERS = {
 # Fetches the wikipedia page for a given team
 def fetch_wikipedia_page(team):
     team_encoded = quote(team.replace(" ", "_"))
-    print(team_encoded)
     if team == "United States" or team == "Australia":
         url = f'https://en.wikipedia.org/wiki/{team_encoded}_men\'s_national_soccer_team'
     elif team == "Sweden":
