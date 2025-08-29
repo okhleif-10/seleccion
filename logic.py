@@ -105,7 +105,7 @@ HEADERS = {
 # Fetches the wikipedia page for a given team
 def fetch_wikipedia_page(team):
     team_encoded = quote(team.replace(" ", "_"))
-    if team == "United States" or team == "Australia":
+    if team == "United States" or team == "Australia" or team == "Canada":
         url = f'https://en.wikipedia.org/wiki/{team_encoded}_men\'s_national_soccer_team'
     elif team == "Sweden":
         url = f'https://en.wikipedia.org/wiki/Sweden_men\'s_national_football_team'
