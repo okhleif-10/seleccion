@@ -97,7 +97,15 @@ if __name__ == '__main__':
         elif sort_option == "FIFA Ranking":
             display_list = fifa_df.sort_values("rank")["display"].tolist()
 
-        selected_display = st.selectbox("Select a country", display_list, index=display_list.index("🇦🇷 Argentina"))
+        if "selected_display" not in st.session_state:
+            st.session_state.selected_display = "🇦🇷 Argentina"
+
+        # Show dropdown with current selection as default
+        selected_display = st.selectbox(
+            "Select a country",
+            display_list,
+            index=display_list.index(st.session_state.selected_display)
+        )
 
         # Skip if user selects a header
         if selected_display.startswith("--"):
