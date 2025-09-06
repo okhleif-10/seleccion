@@ -71,7 +71,14 @@ def format_country_with_flag(rankings):
 def get_flag_from_img(cell):
     flag_span = cell.find("span", class_="flagicon")
     if flag_span and flag_span.img and flag_span.img.has_attr("alt"):
-        return get_flag(flag_span.img["alt"])
+        alt = flag_span.img["alt"]
+        # Normalize special cases
+        if "Georgia" in alt:
+            alt = "Georgia"
+        elif alt == "Democratic Republic of the Congo":
+            alt = "Congo, The Democratic Republic of the"
+        return get_flag(alt)
+
     return "🌍"
 
 # Alternative function to get the flag from the club cell
