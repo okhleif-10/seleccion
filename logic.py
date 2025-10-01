@@ -1,6 +1,6 @@
 import pandas as pd
 import requests
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 import re
 from bs4 import BeautifulSoup
 from io import StringIO
@@ -51,8 +51,12 @@ def get_flag(country_name):
         "Turkey": "🇹🇷",
         "Tahiti": "🇵🇫",
         "Republic of Ireland": "🇮🇪",
-        "United Kingdom": "🇬🇧"
+        "United Kingdom": "🇬🇧",
+        "United States Virgin Islands": "🇻🇮"
     }
+    country_name = country_name.strip()
+    if country_name.lower().startswith("the "):
+        country_name = country_name[4:]
 
     if country_name in manual_flags:
         return manual_flags[country_name]
@@ -60,7 +64,7 @@ def get_flag(country_name):
         try:
             country = pycountry.countries.search_fuzzy(country_name)[0]
             return chr(127397 + ord(country.alpha_2[0])) + chr(127397 + ord(country.alpha_2[1]))
-        except:
+        except Exception as e:
             return "🌍"
 
 # Format each country name with [Flag] [Country Name]
@@ -69,17 +73,35 @@ def format_country_with_flag(rankings):
 
 # Translates html flag from wiki table to emoji flag (for club flags)
 def get_flag_from_img(cell):
-    flag_span = cell.find("span", class_="flagicon")
-    if flag_span and flag_span.img and flag_span.img.has_attr("alt"):
-        alt = flag_span.img["alt"]
-        # Normalize special cases
-        if "Georgia" in alt:
-            alt = "Georgia"
-        elif alt == "Democratic Republic of the Congo":
-            alt = "Congo, The Democratic Republic of the"
-        return get_flag(alt)
+    span = cell.find("span", class_="flagicon")
+    img = span.find("img") if span else cell.find("img")
+    if not img:
+        return "🌍"
 
-    return "🌍"
+    src = (img.get("src") or img.get("data-src") or "").strip()
+    if src:
+        url = f"https:{src}" if src.startswith("//") else src
+
+        # 1) Get filename from URL (thumb or non-thumb)
+        m = re.search(r"/thumb/[^/]+/[^/]+/([^/]+)/", url)
+        filename = m.group(1) if m else url.rsplit("/", 1)[-1]
+
+        # 2) Clean it up
+        filename = unquote(filename)
+        filename = re.sub(r"(?i)\.svg(\.png)?$", "", filename)
+        name = filename.replace("_", " ")
+        name = re.sub(r"\s*\([^)]*\)", "", name).strip()
+        name = re.sub(r"(?i)^flag of\s+", "", name).strip()
+        name = re.sub(r"(?i)^the\s+", "", name).strip()
+
+        if "Georgia" in name:
+            name = "Georgia"
+        elif name == "Democratic Republic of the Congo":
+            name = "Congo, The Democratic Republic of the"
+
+        return get_flag(name)
+    else:
+        return "🌍"
 
 # Alternative function to get the flag from the club cell
 def extract_club_with_flag(cell):
