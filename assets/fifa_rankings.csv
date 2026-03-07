@@ -45,33 +45,33 @@ rank,country_full,country_abrv,total_points,previous_points,rank_change,confeder
 14,Colombia,COL,1669.44,1664.28,0,CONMEBOL,2024-06-20,🇨🇴 Colombia
 106,Comoros,COM,1158.71,1163.02,2,CAF,2024-06-20,🇰🇲 Comoros
 134,Congo,CGO,1176.45,1179.8,2,CAF,2024-06-20,🇨🇬 Congo
-186,Congo DR,COD,1400.93,1388.25,-2,CAF,2024-06-20,🇨🇩 Democratic Republic of the Congo
-51,Cook Islands,COK,896.59,896.59,0,OFC,2024-06-20,🇨🇰 Cook Islands
-11,Costa Rica,CRC,1454.2,1445.38,0,CONCACAF,2024-06-20,🇨🇷 Costa Rica
-166,Côte d'Ivoire,CIV,1499.69,1498.8,-1,CAF,2024-06-20,🇨🇮 Ivory Coast
-81,Croatia,CRO,1728.3,1721.07,-1,UEFA,2024-06-20,🇭🇷 Croatia
-128,Cuba,CUB,975.01,980.65,0,CONCACAF,2024-06-20,🇨🇺 Cuba
-43,Curacao,CUW,1272.71,1262.48,-4,CONCACAF,2024-06-20,🇳🇱 Curaçao
-21,Cyprus,CYP,1136.78,1141.03,2,UEFA,2024-06-20,🇨🇾 Cyprus
-196,Czechia,CZE,1506.23,1501.47,-2,UEFA,2024-06-20,🇨🇿 Czech Republic
-183,Denmark,DEN,1610.76,1602.72,0,UEFA,2024-06-20,🇩🇰 Denmark
-142,Djibouti,DJI,875.13,877.28,1,CAF,2024-06-20,🇩🇯 Djibouti
-48,Dominica,DMA,912.93,922.25,2,CONCACAF,2024-06-20,🇩🇲 Dominica
-23,Dominican Republic,DOM,1045.64,1042.86,0,CONCACAF,2024-06-20,🇩🇴 Dominican Republic
-31,Ecuador,ECU,1517.54,1518.22,-1,CONMEBOL,2024-06-20,🇪🇨 Ecuador
-99,Egypt,EGY,1502.34,1499.72,-1,CAF,2024-06-20,🇪🇬 Egypt
-4,El Salvador,SLV,1303.65,1305.02,-1,CONCACAF,2024-06-20,🇸🇻 El Salvador
-107,England,ENG,1787.88,1794.9,1,UEFA,2024-06-20,🏴󠁧󠁢󠁥󠁮󠁧󠁿 England
-211,Equatorial Guinea,EQG,1260.5,1308.03,10,CAF,2024-06-20,🇬🇶 Equatorial Guinea
-129,Eritrea,ERI,855.56,0.0,0,CAF,2024-06-20,🇪🇷 Eritrea
-159,Estonia,EST,1146.47,1141.13,0,UEFA,2024-06-20,🇪🇪 Estonia
-147,Eswatini,SWZ,1025.18,1048.89,6,CAF,2024-06-20,🇸🇿 Eswatini
-125,Ethiopia,ETH,1066.16,1068.48,-2,CAF,2024-06-20,🇪🇹 Ethiopia
-155,Faroe Islands,FRO,1093.7,1103.43,6,UEFA,2024-06-20,🇫🇴 Faroe Islands
-75,Fiji,FIJ,983.81,983.81,-2,OFC,2024-06-20,🇫🇯 Fiji
-3,Finland,FIN,1393.4,1394.44,2,UEFA,2024-06-20,🇫🇮 Finland
-86,France,FRA,1837.47,1840.59,0,UEFA,2024-06-20,🇫🇷 France
-116,Gabon,GAB,1288.45,1287.33,-1,CAF,2024-06-20,🇬🇦 Gabon
+48,Congo DR,COD,1400.93,1388.25,-2,CAF,2024-06-20,🇨🇩 Democratic Republic of the Congo
+186,Cook Islands,COK,896.59,896.59,0,OFC,2024-06-20,🇨🇰 Cook Islands
+51,Costa Rica,CRC,1454.2,1445.38,0,CONCACAF,2024-06-20,🇨🇷 Costa Rica
+37,Côte d'Ivoire,CIV,1499.69,1498.8,-1,CAF,2024-06-20,🇨🇮 Ivory Coast
+11,Croatia,CRO,1728.3,1721.07,-1,UEFA,2024-06-20,🇭🇷 Croatia
+166,Cuba,CUB,975.01,980.65,0,CONCACAF,2024-06-20,🇨🇺 Cuba
+81,Curacao,CUW,1272.71,1262.48,-4,CONCACAF,2024-06-20,🇳🇱 Curaçao
+128,Cyprus,CYP,1136.78,1141.03,2,UEFA,2024-06-20,🇨🇾 Cyprus
+43,Czechia,CZE,1506.23,1501.47,-2,UEFA,2024-06-20,🇨🇿 Czech Republic
+21,Denmark,DEN,1610.76,1602.72,0,UEFA,2024-06-20,🇩🇰 Denmark
+23,23,23,23,23,23,23,23,23
+183,Dominica,DMA,912.93,922.25,2,CONCACAF,2024-06-20,🇩🇲 Dominica
+142,Dominican Republic,DOM,1045.64,1042.86,0,CONCACAF,2024-06-20,🇩🇴 Dominican Republic
+23,Ecuador,ECU,1517.54,1518.22,-1,CONMEBOL,2024-06-20,🇪🇨 Ecuador
+31,Egypt,EGY,1502.34,1499.72,-1,CAF,2024-06-20,🇪🇬 Egypt
+99,El Salvador,SLV,1303.65,1305.02,-1,CONCACAF,2024-06-20,🇸🇻 El Salvador
+4,England,ENG,1787.88,1794.9,1,UEFA,2024-06-20,🏴󠁧󠁢󠁥󠁮󠁧󠁿 England
+107,Equatorial Guinea,EQG,1260.5,1308.03,10,CAF,2024-06-20,🇬🇶 Equatorial Guinea
+211,Eritrea,ERI,855.56,0.0,0,CAF,2024-06-20,🇪🇷 Eritrea
+129,Estonia,EST,1146.47,1141.13,0,UEFA,2024-06-20,🇪🇪 Estonia
+159,Eswatini,SWZ,1025.18,1048.89,6,CAF,2024-06-20,🇸🇿 Eswatini
+147,Ethiopia,ETH,1066.16,1068.48,-2,CAF,2024-06-20,🇪🇹 Ethiopia
+125,Faroe Islands,FRO,1093.7,1103.43,6,UEFA,2024-06-20,🇫🇴 Faroe Islands
+155,Fiji,FIJ,983.81,983.81,-2,OFC,2024-06-20,🇫🇯 Fiji
+75,Finland,FIN,1393.4,1394.44,2,UEFA,2024-06-20,🇫🇮 Finland
+3,France,FRA,1837.47,1840.59,0,UEFA,2024-06-20,🇫🇷 France
+86,Gabon,GAB,1288.45,1287.33,-1,CAF,2024-06-20,🇬🇦 Gabon
 73,Georgia,GEO,1338.91,1333.76,-1,UEFA,2024-06-20,🇬🇪 Georgia
 10,Germany,GER,1646.78,1644.21,0,UEFA,2024-06-20,🇩🇪 Germany
 72,Ghana,GHA,1381.25,1358.77,-4,CAF,2024-06-20,🇬🇭 Ghana
@@ -93,14 +93,14 @@ rank,country_full,country_abrv,total_points,previous_points,rank_change,confeder
 20,IR Iran,IRN,1611.16,1613.96,0,AFC,2024-06-20,🇮🇷 Iran
 58,Iraq,IRQ,1433.07,1420.47,-3,AFC,2024-06-20,🇮🇶 Iraq
 59,Israel,ISR,1312.54,1311.39,1,UEFA,2024-06-20,🇮🇱 Israel
-77,Italy,ITA,1724.37,1724.6,1,UEFA,2024-06-20,🇮🇹 Italy
-13,Jamaica,JAM,1442.82,1435.33,-2,CONCACAF,2024-06-20,🇯🇲 Jamaica
-37,Japan,JPN,1628.81,1621.88,-1,AFC,2024-06-20,🇯🇵 Japan
-70,Jordan,JOR,1374.13,1350.21,-3,AFC,2024-06-20,🇯🇴 Jordan
-19,Kazakhstan,KAZ,1193.62,1203.64,6,UEFA,2024-06-20,🇰🇿 Kazakhstan
-64,Kenya,KEN,1195.45,1191.24,1,CAF,2024-06-20,🇰🇪 Kenya
-114,Korea DPR,PRK,1183.96,1160.57,-8,AFC,2024-06-20,🇰🇵 North Korea
-113,Korea Republic,KOR,1572.87,1563.99,-1,AFC,2024-06-20,🇰🇷 South Korea
+13,Italy,ITA,1724.37,1724.6,1,UEFA,2024-06-20,🇮🇹 Italy
+70,Jamaica,JAM,1442.82,1435.33,-2,CONCACAF,2024-06-20,🇯🇲 Jamaica
+19,Japan,JPN,1628.81,1621.88,-1,AFC,2024-06-20,🇯🇵 Japan
+64,Jordan,JOR,1374.13,1350.21,-3,AFC,2024-06-20,🇯🇴 Jordan
+114,Kazakhstan,KAZ,1193.62,1203.64,6,UEFA,2024-06-20,🇰🇿 Kazakhstan
+113,Kenya,KEN,1195.45,1191.24,1,CAF,2024-06-20,🇰🇪 Kenya
+119,Korea DPR,PRK,1183.96,1160.57,-8,AFC,2024-06-20,🇰🇵 North Korea
+22,Korea Republic,KOR,1572.87,1563.99,-1,AFC,2024-06-20,🇰🇷 South Korea
 79,Kosovo,KOS,1203.16,1205.85,3,UEFA,2024-06-20,🇽🇰 Kosovo
 135,Kuwait,KUW,1098.42,1085.46,-2,AFC,2024-06-20,🇰🇼 Kuwait
 103,Kyrgyz Republic,KGZ,1213.58,1213.6,1,AFC,2024-06-20,🇰🇬 Kyrgyzstan
@@ -138,22 +138,22 @@ rank,country_full,country_abrv,total_points,previous_points,rank_change,confeder
 131,Nicaragua,NCA,1119.88,1102.54,-5,CONCACAF,2024-06-20,🇳🇮 Nicaragua
 111,Niger,NIG,1125.5,1125.5,-1,CAF,2024-06-20,🇳🇪 Niger
 26,Nigeria,NGA,1498.93,1520.27,8,CAF,2024-06-20,🇳🇬 Nigeria
-119,North Macedonia,MKD,1348.63,1354.19,2,UEFA,2024-06-20,🇲🇰 North Macedonia
-66,Northern Ireland,NIR,1341.33,1341.05,0,UEFA,2024-06-20,🇬🇧 Northern Ireland
-69,Norway,NOR,1466.48,1467.51,-1,UEFA,2024-06-20,🇳🇴 Norway
-32,Oman,OMA,1326.18,1323.23,-1,AFC,2024-06-20,🇴🇲 Oman
-78,Pakistan,PAK,842.59,849.94,2,AFC,2024-06-20,🇵🇰 Pakistan
-199,Palestine,PLE,1231.25,1238.66,2,AFC,2024-06-20,🇵🇸 Palestine
-95,Panama,PAN,1482.1,1475.62,-2,CONCACAF,2024-06-20,🇵🇦 Panama
-33,Papua New Guinea,PNG,985.32,985.32,-1,OFC,2024-06-20,🇵🇬 Papua New Guinea
-170,Paraguay,PAR,1427.11,1430.73,2,CONMEBOL,2024-06-20,🇵🇾 Paraguay
-40,Peru,PER,1515.01,1515.82,-1,CONMEBOL,2024-06-20,🇵🇪 Peru
-53,Philippines,PHI,1053.03,1075.14,6,AFC,2024-06-20,🇵🇭 Philippines
-136,Poland,POL,1541.49,1531.49,-2,UEFA,2024-06-20,🇵🇱 Poland
-34,Portugal,POR,1747.04,1748.11,0,UEFA,2024-06-20,🇵🇹 Portugal
-6,Puerto Rico,PUR,1020.22,1006.35,-4,CONCACAF,2024-06-20,🇵🇷 Puerto Rico
-156,Qatar,QAT,1504.06,1507.94,1,AFC,2024-06-20,🇶🇦 Qatar
-56,Republic of Ireland,IRL,1403.84,1399.74,0,UEFA,2024-06-20,🇮🇪 Ireland
+66,North Macedonia,MKD,1348.63,1354.19,2,UEFA,2024-06-20,🇲🇰 North Macedonia
+69,Northern Ireland,NIR,1341.33,1341.05,0,UEFA,2024-06-20,🇬🇧 Northern Ireland
+32,Norway,NOR,1466.48,1467.51,-1,UEFA,2024-06-20,🇳🇴 Norway
+78,Oman,OMA,1326.18,1323.23,-1,AFC,2024-06-20,🇴🇲 Oman
+199,Pakistan,PAK,842.59,849.94,2,AFC,2024-06-20,🇵🇰 Pakistan
+95,Palestine,PLE,1231.25,1238.66,2,AFC,2024-06-20,🇵🇸 Palestine
+33,Panama,PAN,1482.1,1475.62,-2,CONCACAF,2024-06-20,🇵🇦 Panama
+170,Papua New Guinea,PNG,985.32,985.32,-1,OFC,2024-06-20,🇵🇬 Papua New Guinea
+40,Paraguay,PAR,1427.11,1430.73,2,CONMEBOL,2024-06-20,🇵🇾 Paraguay
+53,Peru,PER,1515.01,1515.82,-1,CONMEBOL,2024-06-20,🇵🇪 Peru
+136,Philippines,PHI,1053.03,1075.14,6,AFC,2024-06-20,🇵🇭 Philippines
+34,Poland,POL,1541.49,1531.49,-2,UEFA,2024-06-20,🇵🇱 Poland
+6,Portugal,POR,1747.04,1748.11,0,UEFA,2024-06-20,🇵🇹 Portugal
+156,Puerto Rico,PUR,1020.22,1006.35,-4,CONCACAF,2024-06-20,🇵🇷 Puerto Rico
+56,Qatar,QAT,1504.06,1507.94,1,AFC,2024-06-20,🇶🇦 Qatar
+59,Republic of Ireland,IRL,1403.84,1399.74,0,UEFA,2024-06-20,🇮🇪 Ireland
 49,Romania,ROU,1462.35,1468.17,1,UEFA,2024-06-20,🇷🇴 Romania
 36,Russia,RUS,1506.58,1504.02,-2,UEFA,2024-06-20,🇷🇺 Russia
 130,Rwanda,RWA,1114.15,1112.44,0,CAF,2024-06-20,🇷🇼 Rwanda
@@ -172,22 +172,22 @@ rank,country_full,country_abrv,total_points,previous_points,rank_change,confeder
 152,Solomon Islands,SOL,1111.02,1111.02,1,OFC,2024-06-20,🇸🇧 Solomon Islands
 200,Somalia,SOM,829.81,842.64,3,CAF,2024-06-20,🇸🇴 Somalia
 60,South Africa,RSA,1416.66,1407.67,0,CAF,2024-06-20,🇿🇦 South Africa
-22,South Sudan,SSD,980.02,984.65,0,CAF,2024-06-20,🇸🇸 South Sudan
-168,Spain,ESP,1729.92,1727.5,0,UEFA,2024-06-20,🇪🇸 Spain
-1,Sri Lanka,SRI,820.32,829.41,1,AFC,2024-06-20,🇱🇰 Sri Lanka
-194,St Kitts and Nevis,SKN,1059.53,1056.61,-1,CONCACAF,2024-06-20,🇰🇳 Saint Kitts and Nevis
-154,St Lucia,LCA,979.57,988.67,3,CONCACAF,2024-06-20,🇱🇨 Saint Lucia
-167,St Vincent and the Grenadines,VIN,938.4,953.47,1,CONCACAF,2024-06-20,🇻🇨 Saint Vincent and the Grenadines
-171,Sudan,SDN,1152.29,1129.32,-6,CAF,2024-06-20,🇸🇩 Sudan
-117,Suriname,SUR,1087.77,1071.85,-3,CONCACAF,2024-06-20,🇸🇷 Suriname
-123,Sweden,SWE,1522.19,1531.68,1,UEFA,2024-06-20,🇸🇪 Sweden
-42,Switzerland,SUI,1617.24,1616.41,0,UEFA,2024-06-20,🇨🇭 Switzerland
-18,Syria,SYR,1246.68,1266.52,4,AFC,2024-06-20,🇸🇾 Syria
-84,Tahiti,TAH,999.48,999.48,-1,OFC,2024-06-20,🇵🇫 Tahiti
-157,Tajikistan,TJK,1212.41,1216.76,3,AFC,2024-06-20,🇹🇯 Tajikistan
-100,Tanzania,TAN,1174.99,1159.81,-5,CAF,2024-06-20,🇹🇿 Tanzania
-110,Thailand,THA,1218.56,1208.93,-1,AFC,2024-06-20,🇹🇭 Thailand
-96,The Gambia,GAM,1112.55,1114.8,2,CAF,2024-06-20,🇬🇲 Gambia
+168,South Sudan,SSD,980.02,984.65,0,CAF,2024-06-20,🇸🇸 South Sudan
+1,Spain,ESP,1729.92,1727.5,0,UEFA,2024-06-20,🇪🇸 Spain
+194,Sri Lanka,SRI,820.32,829.41,1,AFC,2024-06-20,🇱🇰 Sri Lanka
+154,St Kitts and Nevis,SKN,1059.53,1056.61,-1,CONCACAF,2024-06-20,🇰🇳 Saint Kitts and Nevis
+167,St Lucia,LCA,979.57,988.67,3,CONCACAF,2024-06-20,🇱🇨 Saint Lucia
+171,St Vincent and the Grenadines,VIN,938.4,953.47,1,CONCACAF,2024-06-20,🇻🇨 Saint Vincent and the Grenadines
+117,Sudan,SDN,1152.29,1129.32,-6,CAF,2024-06-20,🇸🇩 Sudan
+123,Suriname,SUR,1087.77,1071.85,-3,CONCACAF,2024-06-20,🇸🇷 Suriname
+42,Sweden,SWE,1522.19,1531.68,1,UEFA,2024-06-20,🇸🇪 Sweden
+18,Switzerland,SUI,1617.24,1616.41,0,UEFA,2024-06-20,🇨🇭 Switzerland
+84,Syria,SYR,1246.68,1266.52,4,AFC,2024-06-20,🇸🇾 Syria
+157,Tahiti,TAH,999.48,999.48,-1,OFC,2024-06-20,🇵🇫 Tahiti
+100,Tajikistan,TJK,1212.41,1216.76,3,AFC,2024-06-20,🇹🇯 Tajikistan
+110,Tanzania,TAN,1174.99,1159.81,-5,CAF,2024-06-20,🇹🇿 Tanzania
+96,Thailand,THA,1218.56,1208.93,-1,AFC,2024-06-20,🇹🇭 Thailand
+116,The Gambia,GAM,1112.55,1114.8,2,CAF,2024-06-20,🇬🇲 Gambia
 198,Timor-Leste,TLS,843.4,843.4,-2,AFC,2024-06-20,🇹🇱 Timor-Leste
 124,Togo,TOG,1158.7,1170.34,7,CAF,2024-06-20,🇹🇬 Togo
 197,Tonga,TGA,833.12,833.12,-1,OFC,2024-06-20,🇹🇴 Tonga
