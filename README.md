@@ -37,3 +37,8 @@ All selections are copy/pastable.
 Every squad table can be downloaded as a .csv file with the click of a button.
 <img width="314" height="96" alt="Screen Shot 2025-08-02 at 10 41 28 PM" src="https://github.com/user-attachments/assets/3913ddd9-27ff-4fcc-9b44-e3349bc1a0c2" />
 <img width="879" height="392" alt="Screen Shot 2025-08-02 at 10 40 47 PM" src="https://github.com/user-attachments/assets/0418eb26-a788-4f4e-9e37-f997b461d5c3" />
+
+## Contact
+
+Omar Khleif
+omarkhleif@yahoo.com
