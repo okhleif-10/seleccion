@@ -98,7 +98,7 @@ if __name__ == '__main__':
             display_list = fifa_df.sort_values("rank")["display"].tolist()
 
         if "selected_display" not in st.session_state:
-            st.session_state.selected_display = "🇦🇷 Argentina"
+            st.session_state.selected_display = "🇪🇸 Spain"
 
         # Show dropdown with current selection as default
         selected_display = st.selectbox(
